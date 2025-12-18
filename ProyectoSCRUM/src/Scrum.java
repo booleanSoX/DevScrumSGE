@@ -14,7 +14,7 @@ public class Scrum {
         int tiempoRespuesta;
         char tipoVehiculo;
         HashMap<Character, Integer> vehiculoID = new HashMap<Character, Integer>();
-        HashMap<Integer, Integer[][]> vehiculoCoords = new HashMap<Integer, int[][]>();
+        HashMap<Integer, Integer[]> vehiculoCoords = new HashMap<Integer,Integer[]>();
 
 
 
@@ -59,9 +59,15 @@ public class Scrum {
             System.out.println(" ");
         }
 
+        int latitud = 0;
+        int longitud = 0;
 
-
-
+        //Busqueda de la ubicación de la incidencia
+        //No le encontre utilidad
+        while (!(latitud == lugarIncidenciaCoords[0]  && longitud == lugarIncidenciaCoords[1])){
+            latitud++;
+            longitud++;
+        }
 
 
 
