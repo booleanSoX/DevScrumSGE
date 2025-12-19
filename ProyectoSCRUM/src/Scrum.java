@@ -1,5 +1,6 @@
 import java.util.*;
 public class Scrum {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -10,12 +11,16 @@ public class Scrum {
 
         //Declaramos el array y lo rellenamos con la coordenadas de la incidencia        
         int lugarIncidenciaCoords[] = new int[2];
-        boolean disponibilidadVehiculo;
         int tiempoRespuesta;
         char tipoVehiculo;
+
+        boolean disponibilidadVehiculo;
+
+        HashSet<Integer> vehiculosID = new HashSet<>();
+
+
         HashMap<Character, Integer> vehiculoID = new HashMap<Character, Integer>();
         HashMap<Integer, Integer[]> vehiculoCoords = new HashMap<Integer,Integer[]>();
-
 
 
 
@@ -24,14 +29,15 @@ public class Scrum {
         //Le pedimos al usuario que nos introduzca las coordenadas del incidente        
         System.out.println("Dame la ubicación de la incidencia:");
         int coordenadaIncidenciaX = sc.nextInt();
-        int coordenadaIncidenciay = sc.nextInt(); 
-        
-        
-        
-        
-        
-        
-        
+        int coordenadaIncidenciay = sc.nextInt();
+
+
+
+        // En el main:
+        Vehiculo v1 = new Vehiculo(101, "A", 5, 5);
+        Vehiculo v2 = new Vehiculo(102, "B", 6, 5);
+
+        System.out.println(v1.id);
         
         
         ///////////INTRODUCCION DE DATOS EN VARIABLES///////////
@@ -63,11 +69,6 @@ public class Scrum {
         int longitud = 0;
 
         //Busqueda de la ubicación de la incidencia
-        //No le encontre utilidad
-        while (!(latitud == lugarIncidenciaCoords[0]  && longitud == lugarIncidenciaCoords[1])){
-            latitud++;
-            longitud++;
-        }
 
 
 
