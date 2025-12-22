@@ -1,5 +1,6 @@
 import java.util.*;
 public class Scrum {
+    public static HashSet<Integer> vehiculosID = new HashSet<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,7 +17,6 @@ public class Scrum {
 
         boolean disponibilidadVehiculo;
 
-        HashSet<Integer> vehiculosID = new HashSet<>();
 
 
         HashMap<Character, Integer> vehiculoID = new HashMap<Character, Integer>();

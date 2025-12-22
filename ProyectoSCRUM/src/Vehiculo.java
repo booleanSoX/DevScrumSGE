@@ -6,7 +6,7 @@ public class Vehiculo {
     boolean disponible;
 
     public Vehiculo(int id, String tipo, int f, int c) {
-        this.id = generadorid();
+        this.id = AlSeVI.generadorID();
         this.tipo = tipo;
         this.fila = f;
         this.col = c;
