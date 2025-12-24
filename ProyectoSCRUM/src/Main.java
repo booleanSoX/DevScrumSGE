@@ -1,11 +1,36 @@
 import java.util.*;
-public class Scrum {
+public class Main {
+    public static int medidasMAPA = 10;
     public static HashSet<Integer> vehiculosID = new HashSet<>();
+    public static int[][] mapa = new int[medidasMAPA][medidasMAPA];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        
+        int opcion = 0;
+
+        do {
+            Menu.mostrarMenu();
+            if (sc.hasNextInt()) {
+                opcion = sc.nextInt();
+                Menu.gestionarOpcion(opcion, sc);
+            } else {
+                System.out.println("Error: Introdueix un número.");
+                sc.next();
+            }
+
+        } while (opcion != 4);
+
+        sc.close();
+
+
+
+
+
+
+
+
+
+
         ///////////////VARIABLES////////////////
         //Declaramos el mapa 
         int[][] mapa = new int[10][10];
@@ -34,11 +59,7 @@ public class Scrum {
 
 
         // En el main:
-        Vehiculo v1 = new Vehiculo(101, "A", 5, 5);
-        Vehiculo v2 = new Vehiculo(102, "B", 6, 5);
 
-        System.out.println(v1.id);
-        
         
         ///////////INTRODUCCION DE DATOS EN VARIABLES///////////
         lugarIncidenciaCoords[0] = coordenadaIncidenciaX;
@@ -54,30 +75,7 @@ public class Scrum {
 
 
 
-
         /////////////OUTPUTS///////////
-        
-        //Impresion del mapa con las coordenadas
-        for (int i = 0; i < mapa.length; i++) {
-            for (int j = 0; j < mapa.length; j++) {
-                System.out.print("[" + i + "]" + "[" + j + "] ");
-            }
-            System.out.println(" ");
-        }
-
-        int latitud = 0;
-        int longitud = 0;
-
-        //Busqueda de la ubicación de la incidencia
-
-
-
-
-                sc.close();
-
-
-
-
 
 
 
